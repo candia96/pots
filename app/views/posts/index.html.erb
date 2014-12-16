@@ -1,0 +1,21 @@
+<h1>Mostando los posts</h1>
+
+<ul class='thumbnails' id='posts'>
+  <% @posts.each do |post| %>
+    <div id='post'>
+      <li class='span3'>
+        <div class="thumbnail" id='foto'>
+            <h3><%= post.titulo%></h3>
+              <% if post.has_photo? %>
+                <%= image_tag post.photo_path %>
+              <% end %>
+            <div class='caption'>
+                <%= link_to "ver", post %>
+                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </div>
+        </div>
+      </li>
+    </div>
+  <% end %>
+</ul>
+

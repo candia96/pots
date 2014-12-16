@@ -1,0 +1,14 @@
+<h1>Ingrear cuenta</h1>
+<div class='thumbnails' id='posts'>
+    <%= form_for(@usuario) do |f| %>
+    <div class="field">
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre %><br>
+      <%= f.label :pass %>
+      <%= f.text_field :pass %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>      
+</div>
+<% end %>
